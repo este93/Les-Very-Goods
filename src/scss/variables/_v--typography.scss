@@ -21,7 +21,7 @@ $font-size-base         : 10;
 
 //------GLOBAL FONT SETTINGS
 html {
-  @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
+  @include font-size-vw($font-size-base, $font-size-base);
 }
 body {
     font-family: $ff-main-regular;

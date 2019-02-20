@@ -1,5 +1,32 @@
 // ----- Media objects
 
 .o-main {
+    position: relative;
+    margin-bottom: cr(33);
 
+    &--overlay{
+        .o-main__content{           
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: cr(40);     
+        }
+    }
+
+    &__content{
+        padding: cr(25) cr(50) cr(50) cr(50);
+    }
+
+    &__title{
+        font-size: cr(24);
+        @include font-size(24, 12)
+        font-family: Futura;
+    }
+
+    &__info{
+        font-size: cr(20);  
+        font-family: FuturaBT;
+    }
 }
