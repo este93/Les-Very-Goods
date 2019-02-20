@@ -1,0 +1,8 @@
+.c-title{
+    background: red;
+    font-size: 20px;
+    grid-column: 1 / span 2;
+    @include breakpoint(desktop) {
+        grid-column: 1 / span 3;
+    }
+}

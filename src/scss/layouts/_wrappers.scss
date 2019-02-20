@@ -17,7 +17,8 @@
         padding: 0 8rem; // Set design specific padding
     }
     @include breakpoint(desktop) {
-        max-width: #{$site-desk-design}px;
+        // max-width: #{$site-desk-design}px;
+        max-width: cr(990);
         margin: auto;
         grid-template-columns: auto auto auto;
     }
