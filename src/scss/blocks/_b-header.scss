@@ -1,0 +1,59 @@
+.b-header {
+	padding: cr(37) cr(41) cr(37) cr(41);
+
+	&__container{
+		display: grid;
+		grid-template-columns: cr(50) auto cr(50);
+	}
+
+    &__menu{
+    	&-trigger{
+    		position: relative;
+    		cursor: pointer;
+    		width: 5rem;
+    		&>div{
+    			width: 100%;
+			    height: cr(9);
+			    margin-bottom: 1rem;
+			    border: 1px solid black;
+			    position: relative;
+			    background: white;
+			    &:last-child{
+			    	margin-bottom: 0;
+			    }
+    		}
+    	}
+    }
+
+    &__logo{
+    	img{
+    		margin: auto;
+    	}
+    }
+
+    &__search{
+    	width: cr(50);
+    	height: cr(50);
+    	border: 1px solid black;
+    }
+
+    &.menu-opened{
+        background: #fbf6ef;
+        .b-header__menu-trigger > div{
+        	&:nth-child(1) {
+			    transform: rotate(45deg);
+			    left: -.05rem;
+			    margin: 0;
+			    top: 1.1rem;
+			}
+        	&:nth-child(2) {
+			    transform: rotate(-45deg);
+			    left: -.2rem;
+			    margin: 0;
+			}
+			&:last-child{
+				display: none;
+			}
+        }
+    }
+}

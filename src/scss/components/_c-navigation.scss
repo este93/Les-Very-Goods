@@ -1,0 +1,47 @@
+.c-nav--mob {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #000;
+    overflow-y: scroll;
+    transform: translateY(-100%);
+    transition: transform .3s;
+    transition-timing-function: cubic-bezier(0.41, 0.97, 0.79, 1);
+    z-index: 11;
+    background: #fbf6ef;
+    padding-left: cr(100);
+    top: 0;
+    &.menu-opened{
+        transform: translateY(0);
+        top: cr(200);
+    }
+
+    &__item{
+        font-family: Futura;
+        font-size: cr(28);
+        font-weight: 900;
+
+        .caret{
+            cursor: pointer;
+            &.active{
+                color: red;
+            }
+        }
+    }
+
+    &--submenu{
+        padding-left: cr(60);
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        &__link{
+            font-size: cr(24);
+            color: black;
+        }
+        &.active{
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
